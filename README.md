@@ -14,6 +14,8 @@ To generate the flow weights, use `python i3d_tf_to_pt.py --flow`.
 
 You can also generate both in one run by using both flags simultaneously `python i3d_tf_to_pt.py --rgb --flow`.
 
+If you have errors regarding Protobuf versions, try `PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python python i3d_tf_to_pt.py --rgb --flow`.
+
 Note that the master version requires PyTorch 0.3 as it relies on the recent addition of ConstantPad3d that has been included in this latest release.
 
 If you want to use pytorch 0.2 checkout the branch pytorch-02 which contains a simplified model with even padding on all sides (and the corresponding pytorch weight checkpoints).

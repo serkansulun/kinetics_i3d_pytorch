@@ -1,6 +1,6 @@
 import argparse
 
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 import tensorflow as tf
 import torch
 import torchvision.transforms as transforms
@@ -119,13 +119,13 @@ def transfer_weights(tf_checkpoint, pt_checkpoint, batch_size, modality='rgb'):
 
                 max_v = max(img_tf.max(), img_pt.max())
                 min_v = min(img_tf.min(), img_pt.min())
-                plt.subplot(2, 2, 1)
-                plt.imshow(img_pt, vmax=max_v, vmin=min_v)
-                plt.subplot(2, 2, 2)
-                plt.imshow(img_tf, vmax=max_v, vmin=min_v)
-                plt.subplot(2, 2, 3)
-                plt.imshow(img_tf - img_pt)
-                plt.show()
+                # plt.subplot(2, 2, 1)
+                # plt.imshow(img_pt, vmax=max_v, vmin=min_v)
+                # plt.subplot(2, 2, 2)
+                # plt.imshow(img_tf, vmax=max_v, vmin=min_v)
+                # plt.subplot(2, 2, 3)
+                # plt.imshow(img_tf - img_pt)
+                # plt.show()
                 print('min val : {}, max_val : {}, mean val : {}'.format(
                     min_v, max_v, out_pt_np.mean()))
             loss = criterion(out_pt, torch.ones_like(out_pt))

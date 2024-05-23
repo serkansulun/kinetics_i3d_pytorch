@@ -6,6 +6,8 @@ from the paper [*Quo Vadis, Action Recognition? A New Model and the Kinetics Dat
 
 The original (and official!) tensorflow code can be found [here](https://github.com/deepmind/kinetics-i3d/).
 
+To install the required libraries: `pip install -r requirements.txt`
+
 The heart of the transfer is the `i3d_tf_to_pt.py` script
 
 Launch it with `python i3d_tf_to_pt.py --rgb` to generate the rgb checkpoint weight pretrained from ImageNet inflated initialization.
